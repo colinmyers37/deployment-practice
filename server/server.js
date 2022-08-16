@@ -3,7 +3,7 @@ const cors = require("cors")
 const path = require("path")
 const app = express()
 
-const { getHomePage, getCss } = require("./controller/controller")
+const { getHomePage, getCss, getJs } = require("./controller/controller")
 
 app.use(cors())
 app.use(express.json())
@@ -16,6 +16,7 @@ PORT = 4000
 // })
 app.get('/', getHomePage)
 app.get('/css', getCss)
+app.get('/js', getJs)
 
 
 
