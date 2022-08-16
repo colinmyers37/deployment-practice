@@ -3,7 +3,7 @@ const cors = require("cors")
 const path = require("path")
 const app = express()
 
-const { getHomePage } = require("./controller/controller")
+const { getHomePage, getCss } = require("./controller/controller")
 
 app.use(cors())
 app.use(express.json())
@@ -15,7 +15,7 @@ PORT = 4000
 //     res.sendFile(path.join(__dirname, '../client/index.html'))
 // })
 app.get('/', getHomePage)
-
+app.get('/css', getCss)
 
 
 
