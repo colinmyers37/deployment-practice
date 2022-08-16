@@ -3,6 +3,9 @@ let castle = document.getElementById('castle')
 
 
 
+const sayWelcome = evt => {
+    alert('welcome to my castle')
+}
 
 
 
@@ -10,5 +13,4 @@ let castle = document.getElementById('castle')
 
 
 
-
-castle.addEventListener('click', alert("welcome to my castle"))
+castle.addEventListener('click', sayWelcome)
