@@ -9,7 +9,7 @@ app.use(cors())
 app.use(express.json())
 app.use(express.static('client'))
 
-PORT = 4000
+const port = process.env.PORT || 4000
 
 // app.get('/', (req, res) => {
 //     res.sendFile(path.join(__dirname, '../client/index.html'))
@@ -26,4 +26,4 @@ app.get('/js', getJs)
 
 
 
-app.listen(4000,console.log(`Server is running on port ${PORT}`));
+app.listen(port,console.log(`Server is running on port ${port}`));
